@@ -8,7 +8,9 @@
     "bt": "gulp build:themes",
     "bs": "gulp build:schemes",
     "bump": "gulp bump",
-    "changelog": "gulp changelog"
+    "changelog": "gulp changelog",
+    "prepublish": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
@@ -35,7 +37,7 @@
     "gulp-replace": "^0.6.1",
     "gulp-stats": "0.0.4",
     "gulp-template": "^4.0.0",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.20",
     "run-sequence": "^2.2.0",
     "yargs": "^10.0.3"
   },
@@ -55,5 +57,9 @@
   "bugs": {
     "url": "https://github.com/equinusocio/material-theme/issues"
   },
-  "homepage": "http://equinusocio.github.io/material-theme/"
+  "homepage": "http://equinusocio.github.io/material-theme/",
+  "snyk": true,
+  "dependencies": {
+    "@snyk/protect": "latest"
+  }
 }
